@@ -1,9 +1,9 @@
 //--------------------------------------------------------------------
-//  ��ǻ�Ͱ��а� 2021111954 ������
+//  컴퓨터공학과 2021111954 유수민
 //                                                       listarr.cpp
 //
 //  SOLUTION: Array implementation of the List ADT
-//  Hellloooooooooo
+//  
 //--------------------------------------------------------------------
 
 #include "listarr.h"
@@ -18,7 +18,7 @@ List::List(int maxNumber)
 // data items (defaults to defMaxListSize).
 	:maxSize(maxNumber), size(0), cursor(-1)
 {
-	dataItems = new DataType[maxSize]; // ��ü ����Ʈ �޸� �Ҵ�
+	dataItems = new DataType[maxSize]; // 전체 배열 메모리 할당
 	// pre-lab
 
 }
@@ -43,14 +43,14 @@ void List::insert(const DataType& newDataItem)
 // list. In either case, moves the cursor to newDataItem.
 
 {
-	if (isFull()) cout << "Full List " << endl; // ����Ʈ�� ���� ���
+	if (isFull()) cout << "Full List " << endl; 
 
-	else if (isEmpty()) {//����Ʈ�� �� ���
+	else if (isEmpty()) {
 		dataItems[size] = newDataItem;
 		size++;
 		cursor++;
 	}
-	else { //������ ���
+	else { 
 		dataItems[size] = newDataItem;
 		for (int i = 0; i < size; i++){
 			for (int i = 0; i < size; i++) {
@@ -58,7 +58,7 @@ void List::insert(const DataType& newDataItem)
 					DataType* memory;
 					int a = 1;
 					int b = 2;
-					memory = new DataType[maxSize]; //����Ʈ �޸� �Ҵ�
+					memory = new DataType[maxSize]; 
 					memory[a] = dataItems[i];
 					memory[b] = dataItems[i + 1];
 					dataItems[i] = memory[b];
@@ -79,7 +79,7 @@ void List::remove()
 // cursor to the next data item item in the list. Assumes that the
 // first list data items "follows" the last list data item.
 {
-	if(isEmpty()) cout << "Empty List " << endl; // ����Ʈ�� �� ���
+	if(isEmpty()) cout << "Empty List " << endl; 
 	else {
 		dataItems[cursor] = NULL;
 		for (int i = cursor; i < maxSize; i++) {
@@ -99,7 +99,7 @@ void List::replace(const DataType& newDataItem)
 // Replaces the item marked by the cursor with newDataItem and
 // leaves the cursor at newDataItem.
 {
-	if (isEmpty()) cout << "Empty List " << endl; // ����Ʈ�� �� ���
+	if (isEmpty()) cout << "Empty List " << endl;
 	// Requires that the list is not empty
 	else {
 		dataItems[cursor] = NULL;
