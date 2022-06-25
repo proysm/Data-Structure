@@ -1,9 +1,9 @@
 //--------------------------------------------------------------------
-//  ÄÄÇ»ÅÍ°øÇÐ°ú 2021111954 À¯¼ö¹Î
+//  ï¿½ï¿½Ç»ï¿½Í°ï¿½ï¿½Ð°ï¿½ 2021111954 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //                                                       listarr.cpp
 //
 //  SOLUTION: Array implementation of the List ADT
-//  
+//  Hellloooooooooo
 //--------------------------------------------------------------------
 
 #include "listarr.h"
@@ -18,7 +18,7 @@ List::List(int maxNumber)
 // data items (defaults to defMaxListSize).
 	:maxSize(maxNumber), size(0), cursor(-1)
 {
-	dataItems = new DataType[maxSize]; // ÀüÃ¼ ¸®½ºÆ® ¸Þ¸ð¸® ÇÒ´ç
+	dataItems = new DataType[maxSize]; // ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Þ¸ï¿½ ï¿½Ò´ï¿½
 	// pre-lab
 
 }
@@ -43,14 +43,14 @@ void List::insert(const DataType& newDataItem)
 // list. In either case, moves the cursor to newDataItem.
 
 {
-	if (isFull()) cout << "Full List " << endl; // ¸®½ºÆ®°¡ ²ËÂù °æ¿ì
+	if (isFull()) cout << "Full List " << endl; // ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 
-	else if (isEmpty()) {//¸®½ºÆ®°¡ ºó °æ¿ì
+	else if (isEmpty()) {//ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
 		dataItems[size] = newDataItem;
 		size++;
 		cursor++;
 	}
-	else { //³ª¸ÓÁö °æ¿ì
+	else { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		dataItems[size] = newDataItem;
 		for (int i = 0; i < size; i++){
 			for (int i = 0; i < size; i++) {
@@ -58,7 +58,7 @@ void List::insert(const DataType& newDataItem)
 					DataType* memory;
 					int a = 1;
 					int b = 2;
-					memory = new DataType[maxSize]; //¸®½ºÆ® ¸Þ¸ð¸® ÇÒ´ç
+					memory = new DataType[maxSize]; //ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Þ¸ï¿½ ï¿½Ò´ï¿½
 					memory[a] = dataItems[i];
 					memory[b] = dataItems[i + 1];
 					dataItems[i] = memory[b];
@@ -79,7 +79,7 @@ void List::remove()
 // cursor to the next data item item in the list. Assumes that the
 // first list data items "follows" the last list data item.
 {
-	if(isEmpty()) cout << "Empty List " << endl; // ¸®½ºÆ®°¡ ºó °æ¿ì
+	if(isEmpty()) cout << "Empty List " << endl; // ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
 	else {
 		dataItems[cursor] = NULL;
 		for (int i = cursor; i < maxSize; i++) {
@@ -99,7 +99,7 @@ void List::replace(const DataType& newDataItem)
 // Replaces the item marked by the cursor with newDataItem and
 // leaves the cursor at newDataItem.
 {
-	if (isEmpty()) cout << "Empty List " << endl; // ¸®½ºÆ®°¡ ºó °æ¿ì
+	if (isEmpty()) cout << "Empty List " << endl; // ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½
 	// Requires that the list is not empty
 	else {
 		dataItems[cursor] = NULL;
