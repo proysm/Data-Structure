@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-//
+//  컴퓨터공학과 2021111954 유수민
 //  Laboratory 5                                        stackarr.cpp
 //
 //  SOLUTION: Array implementation of the Stack ADT
